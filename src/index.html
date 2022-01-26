@@ -1,0 +1,61 @@
+<style>
+  main {
+    @include section(fit-content, 100vw);
+    @include absolute;
+    @include cursive;
+
+    background-color: $dark-pri;
+    color: $light-pri;
+    font-size: 20px;
+    font-weight: 800;
+    color: $dark-tri;
+    min-height: 100vh;
+  }
+</style>
+
+<main>
+  <p>&lt;html&gt;</p>
+  <p>${tab}&lt;head&gt;</p>
+  <h2><import path="./tag" s="1" tag="title" c="[AT]" /><br /></h2>
+  <p>${tab}&lt;/head&gt;</p>
+
+  <p>${tab}&lt;body&gt;</p>
+  <h3>
+    <import path="./tag" s="2" tag="h1" c="Hello World!" /> <br />
+    <import s="2" tag="p" c="i am ayushman tripathy." /> <br />
+    <import s="2" tag="p" c="i am Javascript and Linux ethusiast." /> <br />
+    <import s="2" tag="p" c="i am full stack web developer from india."/>
+  </h3>
+  <p>
+    ${tab.repeat(2)}&lt;section id="<span> projects </span>"&gt; <br />
+    <import path="./project" s="3" name="UHC" c="the useful html compiler" />
+    <import
+      name="razite"
+      c="A lightweight cli API client"
+      s="3"
+    />
+    <import
+      name="pipe-script"
+      c="A programming language that revolves around piping."
+      s="3"
+    />
+    ${tab.repeat(2)}&lt;/section&gt;<br />
+  </p>
+  <p>
+    ${tab.repeat(2)}&lt;section id="<span> links </span>"&gt; <br />
+    <import
+      path="./a"
+      s="3"
+      c="github"
+      l="https://github.com/AyushmanTripathy"
+    /><br />
+    <import
+      s="3"
+      c="youtube"
+      l="https://www.youtube.com/channel/UCOLyrqDA_fpo8EAuIgWkoEw"
+    /><br />
+    ${tab.repeat(2)}&lt;/section&gt;
+  </p>
+  <p>${tab}&lt;/body&gt;</p>
+  <p>&lt;/html&gt;</p>
+</main>

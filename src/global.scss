@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Dongle:wght@300&family=Noto+Sans+Mono:wght@100&display=swap");
+
+$dark-pri: #202124;
+$dark-sec: #303030;
+$dark-tri: #6b6b6b;
+
+$light-pri: #bbb;
+$hl: #047dffcb;
+
+@mixin shadow {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+}
+@mixin section($height, $width) {
+  height: $height;
+  width: $width;
+}
+@mixin grid($column, $row) {
+  display: grid;
+  grid-template-columns: $column;
+  grid-template-rows: $row;
+}
+
+@mixin fullscreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+@mixin absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@mixin flex($dir) {
+  display: flex;
+  flex-direction: $dir;
+}
+
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin no-padding-margin {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin code {
+  font-family: "Noto Sans Mono", monospace;
+}
+@mixin cursive {
+  font-family: "Caveat", cursive;
+}
+@mixin color-scheme {
+  color: $light-pri;
+  background-color: $dark-pri;
+}
